@@ -1,20 +1,21 @@
 export function Nav() {
   return (
-    <nav className="sticky top-0 z-50 h-16 border-b backdrop-blur-sm" style={{ backgroundColor: "rgba(255, 255, 255, 0.8)", borderColor: "var(--border)" }}>
-      <div className="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
+    <nav className="sticky top-0 z-50 h-14 border-b border-gray-100 backdrop-blur-md bg-white/80">
+      <div className="max-w-6xl mx-auto px-4 h-full flex items-center justify-between">
         {/* Logo */}
-        <div className="font-semibold text-base" style={{ color: "var(--text-primary)" }}>
-          Zebri
+        <div className="text-base font-bold tracking-tight text-gray-900">
+          zebri
         </div>
 
         {/* CTA Button */}
         <a
           href="#final-cta"
-          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium rounded hover:opacity-90 transition-opacity"
-          style={{ backgroundColor: "var(--accent)", color: "#FFFFFF" }}
+          className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-md bg-blue-600 hover:bg-blue-700 text-white transition-colors shadow-sm shadow-blue-600/20"
         >
           Join Beta
-          <span className="text-xs">→</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <path d="m9 18 6-6-6-6" />
+          </svg>
         </a>
       </div>
     </nav>

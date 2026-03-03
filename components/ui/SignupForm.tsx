@@ -53,32 +53,12 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
     setIsLoading(false);
   };
 
-  const inputStyle = {
-    padding: "10px 12px",
-    border: "1px solid var(--border)",
-    borderRadius: "4px",
-    fontSize: "14px",
-    color: "var(--text-primary)",
-    backgroundColor: "#FFFFFF",
-    outline: "none",
-    transition: "border-color 0.2s",
-  };
-
-  const buttonStyle = {
-    padding: "10px 16px",
-    backgroundColor: "var(--accent)",
-    color: "#FFFFFF",
-    border: "none",
-    borderRadius: "4px",
-    fontWeight: "600",
-    fontSize: "14px",
-    cursor: "pointer",
-    transition: "opacity 0.2s",
-  };
+  const inputClasses =
+    "w-full px-3.5 py-3 border border-gray-200 rounded-md text-sm text-gray-900 bg-white placeholder:text-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 disabled:opacity-50 disabled:cursor-not-allowed";
 
   if (variant === "inline") {
     return (
-      <form onSubmit={handleSubmit} className="flex gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
         <input
           type="email"
           name="email"
@@ -86,17 +66,15 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
           value={formData.email}
           onChange={handleChange}
           disabled={isLoading}
-          style={inputStyle as React.CSSProperties}
-          className="flex-1"
+          className={`flex-1 ${inputClasses}`}
           required
         />
         <button
           type="submit"
           disabled={isLoading}
-          style={{ ...buttonStyle, opacity: isLoading ? 0.7 : 1 } as React.CSSProperties}
-          className="whitespace-nowrap hover:opacity-90 disabled:cursor-not-allowed"
+          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md text-sm whitespace-nowrap transition-colors shadow-sm shadow-blue-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          {isLoading ? "Loading..." : "Request Access"}
+          {isLoading ? "Loading..." : "Claim Your Spot"}
         </button>
       </form>
     );
@@ -112,7 +90,7 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
           value={formData.name}
           onChange={handleChange}
           disabled={isLoading}
-          style={inputStyle as React.CSSProperties}
+          className={inputClasses}
           required
         />
         <input
@@ -122,7 +100,7 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
           value={formData.email}
           onChange={handleChange}
           disabled={isLoading}
-          style={inputStyle as React.CSSProperties}
+          className={inputClasses}
           required
         />
       </div>
@@ -135,7 +113,7 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
           value={formData.instagram}
           onChange={handleChange}
           disabled={isLoading}
-          style={inputStyle as React.CSSProperties}
+          className={inputClasses}
           required
         />
         <select
@@ -143,7 +121,7 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
           value={formData.weddingsPerYear}
           onChange={handleChange}
           disabled={isLoading}
-          style={inputStyle as React.CSSProperties}
+          className={`${inputClasses} ${!formData.weddingsPerYear ? "text-gray-400" : ""}`}
           required
         >
           <option value="">Weddings per year</option>
@@ -161,28 +139,24 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
         onChange={handleChange}
         disabled={isLoading}
         rows={3}
-        style={{ ...inputStyle, resize: "none" } as React.CSSProperties}
+        className={`${inputClasses} resize-none`}
       />
 
       <button
         type="submit"
         disabled={isLoading}
-        style={{ ...buttonStyle, width: "100%", opacity: isLoading ? 0.7 : 1 } as React.CSSProperties}
-        className="hover:opacity-90 disabled:cursor-not-allowed"
+        className="w-full px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md text-sm transition-colors shadow-sm shadow-blue-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
       >
         {isLoading ? "Joining..." : "Join Private Beta"}
       </button>
 
       {message && (
         <div
-          style={{
-            padding: "12px",
-            borderRadius: "4px",
-            fontSize: "14px",
-            border: `1px solid ${message.type === "success" ? "var(--accent)" : "#EF4444"}`,
-            backgroundColor: message.type === "success" ? "#F0F9FF" : "#FEF2F2",
-            color: message.type === "success" ? "var(--accent)" : "#EF4444",
-          }}
+          className={`px-4 py-3 rounded-md text-sm border ${
+            message.type === "success"
+              ? "bg-blue-50 border-blue-200 text-blue-700"
+              : "bg-red-50 border-red-200 text-red-700"
+          }`}
         >
           {message.text}
         </div>
