@@ -19,9 +19,8 @@ export default function Home() {
         <FinalCTA />
 
         {/* Footer */}
-        <footer className="bg-gray-900 text-white">
+        <footer className="bg-gray-950 text-white">
           <div className="max-w-6xl mx-auto px-4">
-            {/* Main footer content */}
             <div className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
               {/* Brand column */}
               <div className="md:col-span-5">
@@ -29,7 +28,7 @@ export default function Home() {
                   zebri
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
-                  The all-in-one command centre for professional wedding MCs. Stop juggling tools. Start running weddings with confidence.
+                  The command centre for professional wedding MCs. One place for your timeline, scripts, couple details, and live performance mode.
                 </p>
               </div>
 
@@ -40,14 +39,14 @@ export default function Home() {
                 </h4>
                 <ul className="space-y-2.5">
                   {[
-                    { label: "Timeline Builder", href: "#" },
-                    { label: "Couple Portal", href: "#" },
-                    { label: "Script Organiser", href: "#" },
-                    { label: "On-The-Night Mode", href: "#" },
-                  ].map((link) => (
-                    <li key={link.label}>
-                      <span className="text-sm text-gray-400 hover:text-white transition-colors cursor-default">
-                        {link.label}
+                    "Timeline Builder",
+                    "Couple Portal",
+                    "Script Organiser",
+                    "Night Mode",
+                  ].map((label) => (
+                    <li key={label}>
+                      <span className="text-sm text-gray-400 cursor-default">
+                        {label}
                       </span>
                     </li>
                   ))}

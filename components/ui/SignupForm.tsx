@@ -4,7 +4,7 @@ import { useState } from "react";
 import { submitSignup } from "@/app/actions/submit";
 
 interface SignupFormProps {
-  variant?: "default" | "minimal" | "inline";
+  variant?: "default" | "inline";
 }
 
 export function SignupForm({ variant = "default" }: SignupFormProps) {
@@ -16,15 +16,11 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    instagram: "",
     weddingsPerYear: "",
-    frustration: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+    e: React.ChangeEvent<HTMLInputElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -39,13 +35,7 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
 
     if (result.success) {
       setMessage({ type: "success", text: result.message });
-      setFormData({
-        name: "",
-        email: "",
-        instagram: "",
-        weddingsPerYear: "",
-        frustration: "",
-      });
+      setFormData({ name: "", email: "", weddingsPerYear: "" });
     } else {
       setMessage({ type: "error", text: result.message });
     }
@@ -54,7 +44,7 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
   };
 
   const inputClasses =
-    "w-full px-3.5 py-3 border border-gray-200 rounded-md text-sm text-gray-900 bg-white placeholder:text-gray-400 outline-none transition-all focus:border-blue-500 focus:ring-2 focus:ring-blue-500/10 disabled:opacity-50 disabled:cursor-not-allowed";
+    "w-full px-4 py-3.5 border border-gray-200 rounded-lg text-sm text-gray-900 bg-white placeholder:text-gray-400 outline-none transition-all focus:border-gray-900 focus:ring-2 focus:ring-gray-900/5 disabled:opacity-50 disabled:cursor-not-allowed";
 
   if (variant === "inline") {
     return (
@@ -72,7 +62,7 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
         <button
           type="submit"
           disabled={isLoading}
-          className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md text-sm whitespace-nowrap transition-colors shadow-sm shadow-blue-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="px-7 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg text-sm whitespace-nowrap transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
         >
           {isLoading ? "Loading..." : "Claim Your Spot"}
         </button>
@@ -82,21 +72,26 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-1.5">Name</label>
         <input
           type="text"
           name="name"
-          placeholder="Full name"
+          placeholder="Your full name"
           value={formData.name}
           onChange={handleChange}
           disabled={isLoading}
           className={inputClasses}
           required
         />
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-1.5">Email</label>
         <input
           type="email"
           name="email"
-          placeholder="Email address"
+          placeholder="you@example.com"
           value={formData.email}
           onChange={handleChange}
           disabled={isLoading}
@@ -105,56 +100,35 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
         />
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-1.5">
+          How many weddings do you MC per year?
+          <span className="text-gray-400 font-normal ml-1">(optional)</span>
+        </label>
         <input
           type="text"
-          name="instagram"
-          placeholder="Instagram handle (without @)"
-          value={formData.instagram}
-          onChange={handleChange}
-          disabled={isLoading}
-          className={inputClasses}
-          required
-        />
-        <select
           name="weddingsPerYear"
+          placeholder="e.g. 30"
           value={formData.weddingsPerYear}
           onChange={handleChange}
           disabled={isLoading}
-          className={`${inputClasses} ${!formData.weddingsPerYear ? "text-gray-400" : ""}`}
-          required
-        >
-          <option value="">Weddings per year</option>
-          <option value="<10">Less than 10</option>
-          <option value="10-24">10–24</option>
-          <option value="25-49">25–49</option>
-          <option value="50+">50+</option>
-        </select>
+          className={inputClasses}
+        />
       </div>
-
-      <textarea
-        name="frustration"
-        placeholder="What's your biggest admin frustration? (optional)"
-        value={formData.frustration}
-        onChange={handleChange}
-        disabled={isLoading}
-        rows={3}
-        className={`${inputClasses} resize-none`}
-      />
 
       <button
         type="submit"
         disabled={isLoading}
-        className="w-full px-6 py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md text-sm transition-colors shadow-sm shadow-blue-600/20 disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full px-6 py-4 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg text-sm transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
       >
-        {isLoading ? "Joining..." : "Join Private Beta"}
+        {isLoading ? "Joining..." : "Claim Your Spot"}
       </button>
 
       {message && (
         <div
-          className={`px-4 py-3 rounded-md text-sm border ${
+          className={`px-4 py-3 rounded-lg text-sm border ${
             message.type === "success"
-              ? "bg-blue-50 border-blue-200 text-blue-700"
+              ? "bg-emerald-50 border-emerald-200 text-emerald-700"
               : "bg-red-50 border-red-200 text-red-700"
           }`}
         >

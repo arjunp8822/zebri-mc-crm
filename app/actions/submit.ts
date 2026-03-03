@@ -7,9 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 interface SignupFormData {
   name: string;
   email: string;
-  instagram: string;
-  weddingsPerYear: string;
-  frustration?: string;
+  weddingsPerYear?: string;
 }
 
 interface SubmitResult {
@@ -20,18 +18,11 @@ interface SubmitResult {
 export async function submitSignup(
   data: SignupFormData
 ): Promise<SubmitResult> {
-  // Validate required fields
   if (!data.name?.trim()) {
     return { success: false, message: "Name is required" };
   }
   if (!data.email?.trim()) {
     return { success: false, message: "Email is required" };
-  }
-  if (!data.instagram?.trim()) {
-    return { success: false, message: "Instagram handle is required" };
-  }
-  if (!data.weddingsPerYear) {
-    return { success: false, message: "Weddings per year is required" };
   }
 
   const ownerEmail = process.env.OWNER_EMAIL;
@@ -46,13 +37,8 @@ New Zebri Beta Signup
 
 Name: ${data.name}
 Email: ${data.email}
-Instagram: @${data.instagram}
-Weddings per Year: ${data.weddingsPerYear}
+Weddings per Year: ${data.weddingsPerYear || "(not provided)"}
 
-Admin Frustration Note:
-${data.frustration || "(No additional notes)"}
-
----
 Timestamp: ${new Date().toISOString()}
     `.trim();
 
@@ -76,22 +62,10 @@ Timestamp: ${new Date().toISOString()}
                 <td style="padding: 8px 0;"><a href="mailto:${data.email}">${data.email}</a></td>
               </tr>
               <tr>
-                <td style="padding: 8px 0; font-weight: 600;">Instagram:</td>
-                <td style="padding: 8px 0;">@${data.instagram}</td>
-              </tr>
-              <tr>
                 <td style="padding: 8px 0; font-weight: 600;">Weddings/Year:</td>
-                <td style="padding: 8px 0;">${data.weddingsPerYear}</td>
+                <td style="padding: 8px 0;">${data.weddingsPerYear || "(not provided)"}</td>
               </tr>
             </table>
-            ${
-              data.frustration
-                ? `
-            <h3 style="color: #18181b; margin-top: 20px; margin-bottom: 10px;">Admin Frustration Note:</h3>
-            <p style="background-color: #f4f4f5; padding: 12px; border-radius: 6px; white-space: pre-wrap;">${data.frustration}</p>
-            `
-                : ""
-            }
             <p style="color: #71717a; font-size: 12px; margin-top: 20px;">Timestamp: ${new Date().toISOString()}</p>
           </body>
         </html>
@@ -100,7 +74,7 @@ Timestamp: ${new Date().toISOString()}
 
     return {
       success: true,
-      message: "Welcome to Zebri! Check your email for next steps.",
+      message: "You\u2019re in! We\u2019ll email you when beta access opens.",
     };
   } catch (error) {
     console.error("Signup error:", error);

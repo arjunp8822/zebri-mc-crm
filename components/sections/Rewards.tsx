@@ -3,7 +3,6 @@ export function Rewards() {
     {
       title: "40% Off Forever",
       description: "Founding members lock in lifetime discounted pricing. When Zebri launches at full price, you\u2019ve already won.",
-      iconBg: "bg-amber-50 border-amber-100",
       iconColor: "#D97706",
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -14,8 +13,7 @@ export function Rewards() {
     },
     {
       title: "Shape the Product",
-      description: "Your feedback directly influences what we build. You\u2019re not a beta tester \u2014 you\u2019re a co-creator.",
-      iconBg: "bg-blue-50 border-blue-100",
+      description: "Your feedback directly influences what we build. You\u2019re not a beta tester. You\u2019re a co-creator.",
       iconColor: "#3B82F6",
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -30,7 +28,6 @@ export function Rewards() {
     {
       title: "Direct Team Access",
       description: "No ticket system. No support queue. Direct Slack channel with the team. Real people answering real questions.",
-      iconBg: "bg-emerald-50 border-emerald-100",
       iconColor: "#10B981",
       icon: (
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -56,7 +53,7 @@ export function Rewards() {
               key={i}
               className="rounded-lg border border-gray-200 bg-white p-6 hover:shadow-md hover:border-gray-300 transition-all duration-200"
             >
-              <div className={`w-10 h-10 rounded-lg ${reward.iconBg} border flex items-center justify-center mb-5`} style={{ color: reward.iconColor }}>
+              <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center mb-5" style={{ color: reward.iconColor }}>
                 {reward.icon}
               </div>
               <h3 className="text-lg font-bold text-gray-900 mb-2">
@@ -70,19 +67,19 @@ export function Rewards() {
         </div>
 
         {/* Urgency callout */}
-        <div className="mt-10 rounded-lg border border-blue-200 bg-blue-50/60 p-5 md:p-6 flex items-start gap-4">
-          <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center flex-shrink-0 mt-0.5">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
+        <div className="mt-10 rounded-lg border border-gray-900 bg-gray-900 p-5 md:p-6 flex items-start gap-4">
+          <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111827" strokeWidth="2.5" strokeLinecap="round">
               <circle cx="12" cy="12" r="10" />
               <line x1="12" x2="12" y1="8" y2="12" />
               <line x1="12" x2="12.01" y1="16" y2="16" />
             </svg>
           </div>
           <div>
-            <p className="text-sm font-semibold text-gray-900">
+            <p className="text-sm font-semibold text-white">
               Only for founding members.
             </p>
-            <p className="text-sm text-gray-600 mt-1">
+            <p className="text-sm text-gray-400 mt-1">
               Once the 20 spots fill, the next batch won&apos;t get these benefits. First come, first served.
             </p>
           </div>

@@ -9,12 +9,12 @@ export function FAQ() {
     {
       id: "pro-only",
       q: "Is Zebri only for professional MCs?",
-      a: "Yes. We built this specifically for MCs doing 25+ weddings per year. If you do fewer than 10, Zebri isn\u2019t the right fit. That\u2019s intentional.",
+      a: "Yes. We built this specifically for MCs doing 25+ weddings per year. If you do fewer than 10, Zebri probably isn\u2019t the right fit. That\u2019s intentional.",
     },
     {
       id: "crm",
       q: "Is this a CRM?",
-      a: "No. Zebri is not a client database. It\u2019s a command centre for running individual weddings. Couple details, timeline, scripts, on-the-night mode. That\u2019s it.",
+      a: "No. Zebri is not a client database. It\u2019s a command centre for running individual weddings. Couple details, timeline, scripts, night mode. That\u2019s it.",
     },
     {
       id: "launch",
@@ -39,7 +39,7 @@ export function FAQ() {
     {
       id: "after-signup",
       q: "What happens after I sign up?",
-      a: "You\u2019ll receive one email confirming your spot. When beta access opens, we\u2019ll invite founding members first. No spam, no drip campaigns \u2014 just one email when it\u2019s time.",
+      a: "You\u2019ll receive one email confirming your spot. When beta access opens, we\u2019ll invite founding members first. No spam, no drip campaigns. Just one email when it\u2019s time.",
     },
   ];
 
@@ -101,7 +101,7 @@ export function FAQ() {
               href="https://instagram.com/zebrimc"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 font-medium hover:text-blue-700 transition-colors"
+              className="text-gray-900 font-medium hover:text-gray-700 transition-colors underline underline-offset-2"
             >
               DM us on Instagram
             </a>
