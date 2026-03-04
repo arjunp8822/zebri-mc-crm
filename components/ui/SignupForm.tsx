@@ -48,25 +48,38 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
 
   if (variant === "inline") {
     return (
-      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
-        <input
-          type="email"
-          name="email"
-          placeholder="your@email.com"
-          value={formData.email}
-          onChange={handleChange}
-          disabled={isLoading}
-          className={`flex-1 ${inputClasses}`}
-          required
-        />
-        <button
-          type="submit"
-          disabled={isLoading}
-          className="px-7 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg text-sm whitespace-nowrap transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-        >
-          {isLoading ? "Loading..." : "Claim Your Spot"}
-        </button>
-      </form>
+      <div className="space-y-3">
+        <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
+          <input
+            type="email"
+            name="email"
+            placeholder="your@email.com"
+            value={formData.email}
+            onChange={handleChange}
+            disabled={isLoading}
+            className={`flex-1 ${inputClasses}`}
+            required
+          />
+          <button
+            type="submit"
+            disabled={isLoading}
+            className="px-7 py-3.5 bg-gray-900 hover:bg-gray-800 text-white font-semibold rounded-lg text-sm whitespace-nowrap transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {isLoading ? "Loading..." : "Claim Your Spot"}
+          </button>
+        </form>
+        {message && (
+          <div
+            className={`px-4 py-3 rounded-lg text-sm border ${
+              message.type === "success"
+                ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+                : "bg-red-50 border-red-200 text-red-700"
+            }`}
+          >
+            {message.text}
+          </div>
+        )}
+      </div>
     );
   }
 

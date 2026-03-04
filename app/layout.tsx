@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${inter.variable} antialiased`}
         style={{ fontFamily: "var(--font-inter)", backgroundColor: "#FFFFFF", color: "#1F2937" }}

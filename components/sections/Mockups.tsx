@@ -194,7 +194,7 @@ export function Mockups() {
     { id: "timeline", label: "Timeline Builder", Component: MockTimeline },
     { id: "portal", label: "Couple Portal", Component: MockCouplePortal },
     { id: "script", label: "Script Organiser", Component: MockScriptOrganiser },
-    { id: "night", label: "On-The-Night Mode", Component: MockOnTheNight },
+    { id: "event", label: "Event Mode", Component: MockOnTheNight },
   ];
 
   const activeComponent = tabs.find((t) => t.id === activeTab);

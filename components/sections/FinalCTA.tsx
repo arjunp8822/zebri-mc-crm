@@ -2,7 +2,7 @@ import { SignupForm } from "@/components/ui/SignupForm";
 
 export function FinalCTA() {
   return (
-    <section id="final-cta" className="py-20 px-4 md:py-32 bg-gray-50">
+    <section id="join-beta" className="py-20 px-4 md:py-32 bg-gray-50">
       <div className="max-w-lg mx-auto">
         {/* Badge */}
         <div className="text-center mb-8">
@@ -23,7 +23,9 @@ export function FinalCTA() {
             Be one of the first.
           </h2>
           <p className="text-base text-gray-500 leading-relaxed max-w-md mx-auto">
-            We&apos;re building Zebri with a small group of MCs who know the pain. Get 40% off forever, direct team access, and the chance to shape what this becomes.
+            We&apos;re building Zebri with a small group of MCs who know the
+            pain. Get 40% off forever, direct team access, and the chance to
+            shape what this becomes.
           </p>
         </div>
 
@@ -44,7 +46,10 @@ export function FinalCTA() {
             { value: "Direct", label: "Team access" },
             { value: "Q3 2026", label: "Beta launch" },
           ].map((stat, i) => (
-            <div key={i} className="text-center py-3 px-2 rounded-lg border border-gray-200 bg-white">
+            <div
+              key={i}
+              className="text-center py-3 px-2 rounded-lg border border-gray-200 bg-white"
+            >
               <div className="text-lg md:text-xl font-bold text-gray-900 mb-0.5">
                 {stat.value}
               </div>

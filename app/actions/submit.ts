@@ -18,9 +18,6 @@ interface SubmitResult {
 export async function submitSignup(
   data: SignupFormData
 ): Promise<SubmitResult> {
-  if (!data.name?.trim()) {
-    return { success: false, message: "Name is required" };
-  }
   if (!data.email?.trim()) {
     return { success: false, message: "Email is required" };
   }
@@ -35,7 +32,7 @@ export async function submitSignup(
 New Zebri Beta Signup
 =====================
 
-Name: ${data.name}
+Name: ${data.name || "(not provided)"}
 Email: ${data.email}
 Weddings per Year: ${data.weddingsPerYear || "(not provided)"}
 
@@ -46,7 +43,7 @@ Timestamp: ${new Date().toISOString()}
       from: "Zebri <noreply@zebri.com>",
       to: ownerEmail,
       replyTo: data.email,
-      subject: `New Beta Signup: ${data.name}`,
+      subject: `New Beta Signup: ${data.name || data.email}`,
       text: emailContent,
       html: `
         <html>
@@ -55,7 +52,7 @@ Timestamp: ${new Date().toISOString()}
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
                 <td style="padding: 8px 0; font-weight: 600; width: 150px;">Name:</td>
-                <td style="padding: 8px 0;">${data.name}</td>
+                <td style="padding: 8px 0;">${data.name || "(not provided)"}</td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; font-weight: 600;">Email:</td>

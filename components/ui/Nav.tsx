@@ -7,7 +7,7 @@ export function Nav() {
 
         {/* CTA Button */}
         <a
-          href="#final-cta"
+          href="#join-beta"
           className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold rounded-md bg-gray-900 hover:bg-gray-800 text-white transition-colors"
         >
           Join Beta

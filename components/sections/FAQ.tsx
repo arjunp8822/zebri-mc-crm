@@ -9,12 +9,12 @@ export function FAQ() {
     {
       id: "pro-only",
       q: "Is Zebri only for professional MCs?",
-      a: "Yes. We built this specifically for MCs doing 25+ weddings per year. If you do fewer than 10, Zebri probably isn\u2019t the right fit. That\u2019s intentional.",
+      a: "Zebri is built for wedding MCs who want to run their business more efficiently. Whether you do 5 weddings a year or 50, if you want one place to manage your clients, timelines, scripts, and events, Zebri is for you.",
     },
     {
       id: "crm",
       q: "Is this a CRM?",
-      a: "Zebri includes client management features\u2014couple contacts, vendor details, payment tracking\u2014but it\u2019s not a generic CRM. It\u2019s purpose-built for MCs. Think of it as the operational hub no generic CRM was designed to be.",
+      a: "Zebri includes full client management features like couple contacts, vendor details, and payment tracking, but it goes further. It\u2019s purpose built for MCs with timelines, scripts, couple portals, and event mode all in one place. Think of it as the operational hub no generic CRM was designed to be.",
     },
     {
       id: "launch",
@@ -24,12 +24,12 @@ export function FAQ() {
     {
       id: "pricing",
       q: "How much will Zebri cost?",
-      a: "TBD. But founding members get 40% off the eventual price, locked in forever. You\u2019re getting the best deal possible.",
+      a: "Zebri will be $50 per month. Founding members get 40% off that price, locked in forever. That\u2019s $30 per month for as long as you stay subscribed.",
     },
     {
       id: "feedback",
       q: "Can I give feedback?",
-      a: "That\u2019s the whole point. You\u2019ll have direct access to our team via Slack. Tell us what\u2019s working, what\u2019s not, what you need next.",
+      a: "Absolutely, and we genuinely want to hear it. As a founding member you\u2019ll have direct access to our team via Slack. Your feedback directly shapes what we build next.",
     },
     {
       id: "global",
