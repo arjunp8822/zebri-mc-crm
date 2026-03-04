@@ -40,7 +40,7 @@ Timestamp: ${new Date().toISOString()}
     `.trim();
 
     await resend.emails.send({
-      from: "Zebri <noreply@zebri.com>",
+      from: "Zebri <arjun@zebri.com.au>",
       to: ownerEmail,
       replyTo: data.email,
       subject: `New Beta Signup: ${data.name || data.email}`,
@@ -52,15 +52,21 @@ Timestamp: ${new Date().toISOString()}
             <table style="width: 100%; border-collapse: collapse;">
               <tr>
                 <td style="padding: 8px 0; font-weight: 600; width: 150px;">Name:</td>
-                <td style="padding: 8px 0;">${data.name || "(not provided)"}</td>
+                <td style="padding: 8px 0;">${
+                  data.name || "(not provided)"
+                }</td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; font-weight: 600;">Email:</td>
-                <td style="padding: 8px 0;"><a href="mailto:${data.email}">${data.email}</a></td>
+                <td style="padding: 8px 0;"><a href="mailto:${data.email}">${
+        data.email
+      }</a></td>
               </tr>
               <tr>
                 <td style="padding: 8px 0; font-weight: 600;">Weddings/Year:</td>
-                <td style="padding: 8px 0;">${data.weddingsPerYear || "(not provided)"}</td>
+                <td style="padding: 8px 0;">${
+                  data.weddingsPerYear || "(not provided)"
+                }</td>
               </tr>
             </table>
             <p style="color: #71717a; font-size: 12px; margin-top: 20px;">Timestamp: ${new Date().toISOString()}</p>
@@ -75,6 +81,9 @@ Timestamp: ${new Date().toISOString()}
     };
   } catch (error) {
     console.error("Signup error:", error);
-    return { success: false, message: "Something went wrong. Please try again." };
+    return {
+      success: false,
+      message: "Something went wrong. Please try again.",
+    };
   }
 }
