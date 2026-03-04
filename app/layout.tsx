@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { PostHogProvider } from "./providers";
 import "./globals.css";
 
 const inter = Inter({
@@ -47,7 +48,9 @@ export default function RootLayout({
         className={`${inter.variable} antialiased`}
         style={{ fontFamily: "var(--font-inter)", backgroundColor: "#FFFFFF", color: "#1F2937" }}
       >
-        {children}
+        <PostHogProvider>
+          {children}
+        </PostHogProvider>
       </body>
     </html>
   );

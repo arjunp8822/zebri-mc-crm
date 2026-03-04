@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import posthog from "posthog-js";
 import { submitSignup } from "@/app/actions/submit";
 
 interface SignupFormProps {
@@ -34,6 +35,15 @@ export function SignupForm({ variant = "default" }: SignupFormProps) {
     const result = await submitSignup(formData);
 
     if (result.success) {
+      // Track beta registration event in PostHog
+      posthog.capture("beta_registration", {
+        name: formData.name,
+        email: formData.email,
+        weddingsPerYear: formData.weddingsPerYear
+          ? parseInt(formData.weddingsPerYear, 10)
+          : null,
+      });
+
       setMessage({ type: "success", text: result.message });
       setFormData({ name: "", email: "", weddingsPerYear: "" });
     } else {
