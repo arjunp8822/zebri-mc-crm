@@ -258,8 +258,10 @@ Features (with brief 1-line description):
    - Screenshot: Form with pronunciation guide, bridal party, cultural notes
 3. **Script Organiser** — Reusable templates by section
    - Screenshot: Collapsible sections (Opening, Transitions, Closing)
-4. **On-The-Night Mode** — Dark mode built for performance
+4. **Night Mode** — Dark mode built for performance
    - Screenshot: Large text, current item highlighted, offline ready
+5. **Client Management** — Everything you track in a spreadsheet, purpose-built for MCs
+   - Screenshot: Table/list view with couple, date, venue, status, payment columns
 
 Each screenshot should be a coded mockup that looks like real software.
 
@@ -292,6 +294,7 @@ Include 6–8 FAQs addressing:
 - What happens after I sign up?
 
 Tone must remove friction and create trust.
+Note: The CRM FAQ should reflect that Zebri includes client management features but is purpose-built for MCs (not a generic CRM).
 
 ---
 
@@ -301,7 +304,8 @@ Reinforce urgency:
 
 - Headline: Creates scarcity/FOMO
 - Subtext: Clear value (the reward)
-- Form: Full signup (name, email, IG, weddings/year, frustration)
+- Form: Full signup (name, email, weddings/year optional)
+- Primary CTA button color: `bg-gray-900` (black)
 - Visual emphasis on the reward (not just "join beta")
 
 ---
@@ -366,9 +370,7 @@ Form must:
 
 - Capture name
 - Email
-- Instagram handle
-- Weddings per year (dropdown)
-- Optional admin frustration text
+- Weddings per year (text field, optional)
 
 On submit:
 
@@ -415,7 +417,8 @@ This must feel exclusive and purpose-built.
 - Logo/wordmark on left
 - Links: Instagram (with icon), Email (with icon)
 - Use proper SVG or icon font (not emoji)
-- Legal: "© 2024 Zebri. Built for professional wedding MCs."
+- Legal: "© 2026 Zebri. Built for professional wedding MCs."
+- Email: arjun@zebri.com.au
 - NO social media badges or unnecessary elements
 
 ---

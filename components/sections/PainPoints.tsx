@@ -17,12 +17,9 @@ export function PainPoints() {
             <p className="text-sm font-semibold text-gray-800 mb-4">Friday, 2 days before the wedding</p>
             <ul className="space-y-3">
               {[
-                "Couple details scattered across a Google Form",
-                "Runsheet in a shared Google Doc (outdated)",
-                "Pronunciation guide buried somewhere in your notes",
-                "DJ sending WhatsApp messages about timing",
-                "Photographer asking about ceremony order",
-                "6 tabs open just to remember what to do",
+                "Couple details in a Google Form you can\u2019t find",
+                "Runsheet in a Doc that\u2019s three versions behind",
+                "Vendors messaging you on four different apps",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2.5">
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#EF4444" strokeWidth="2" strokeLinecap="round" className="flex-shrink-0 mt-0.5">
@@ -41,31 +38,28 @@ export function PainPoints() {
           </div>
 
           {/* After */}
-          <div className="rounded-lg border border-gray-900 bg-gray-900 p-6 md:p-8">
+          <div className="rounded-lg border-l-4 border-l-emerald-500 border border-gray-200 bg-white p-6 md:p-8">
             <div className="flex items-center gap-2 mb-5">
               <div className="w-2 h-2 rounded-full bg-emerald-400"></div>
-              <span className="text-xs font-bold text-emerald-400 uppercase tracking-wider">With Zebri</span>
+              <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider">With Zebri</span>
             </div>
-            <p className="text-sm font-semibold text-white mb-4">Friday, 2 days before the wedding</p>
+            <p className="text-sm font-semibold text-gray-800 mb-4">Friday, 2 days before the wedding</p>
             <ul className="space-y-3">
               {[
-                "Send one link. Couple fills in everything.",
-                "Names, pronunciation, bridal party, cultural notes",
-                "Timeline synced. They see what\u2019s happening and when.",
-                "Scripts organised by section, ready to go",
-                "Night mode: dark screen, large text, next cue visible",
-                "One tab. One source of truth. Zero stress.",
+                "One link to the couple. Everything filled in.",
+                "Timeline, scripts, and notes in one place.",
+                "Night mode ready. You just show up and perform.",
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2.5">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#34D399" strokeWidth="2" strokeLinecap="round" className="flex-shrink-0 mt-0.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2" strokeLinecap="round" className="flex-shrink-0 mt-0.5">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
-                  <span className="text-sm text-gray-300 leading-relaxed">{item}</span>
+                  <span className="text-sm text-gray-600 leading-relaxed">{item}</span>
                 </li>
               ))}
             </ul>
-            <div className="mt-5 pt-4 border-t border-gray-700">
-              <p className="text-xs text-emerald-400 font-medium">
+            <div className="mt-5 pt-4 border-t border-gray-100">
+              <p className="text-xs text-emerald-600 font-medium">
                 Result: perfect pronunciation. Every detail nailed. Confident delivery.
               </p>
             </div>

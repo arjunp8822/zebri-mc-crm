@@ -24,8 +24,8 @@ export default function Home() {
             <div className="py-12 md:py-16 grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12">
               {/* Brand column */}
               <div className="md:col-span-5">
-                <div className="text-lg font-bold tracking-tight mb-3">
-                  zebri
+                <div className="mb-3">
+                  <img src="/zebri-logo.svg" alt="zebri" className="h-4 brightness-0 invert" />
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed max-w-sm">
                   The command centre for professional wedding MCs. One place for your timeline, scripts, couple details, and live performance mode.
@@ -43,6 +43,7 @@ export default function Home() {
                     "Couple Portal",
                     "Script Organiser",
                     "Night Mode",
+                    "Client Management",
                   ].map((label) => (
                     <li key={label}>
                       <span className="text-sm text-gray-400 cursor-default">
@@ -76,14 +77,14 @@ export default function Home() {
                   </li>
                   <li>
                     <a
-                      href="mailto:hello@zebri.com"
+                      href="mailto:arjun@zebri.com.au"
                       className="text-sm text-gray-400 hover:text-white transition-colors flex items-center gap-2.5"
                     >
                       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         <rect width="20" height="16" x="2" y="4" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                       </svg>
-                      hello@zebri.com
+                      arjun@zebri.com.au
                     </a>
                   </li>
                 </ul>
@@ -105,7 +106,7 @@ export default function Home() {
 
             {/* Bottom bar */}
             <div className="py-6 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-500">
-              <p>&copy; {new Date().getFullYear()} Zebri. Built for professional wedding MCs.</p>
+              <p>&copy; 2026 Zebri. Built for professional wedding MCs.</p>
               <p className="flex items-center gap-1.5">
                 Made with
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#EF4444" stroke="none">

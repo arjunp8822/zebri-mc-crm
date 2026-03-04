@@ -7,7 +7,7 @@ export function Features() {
             Built for how you actually work.
           </h2>
           <p className="text-lg text-gray-500 mt-4 max-w-xl">
-            Four tools that replace everything you&apos;re duct-taping together right now.
+            Five tools that replace everything you&apos;re duct-taping together right now.
           </p>
         </div>
 
@@ -15,8 +15,8 @@ export function Features() {
           {/* 1. Timeline Builder */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center mb-5">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mb-5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-blue-600">
                   <circle cx="12" cy="12" r="10" />
                   <polyline points="12 6 12 12 16 14" />
                 </svg>
@@ -24,15 +24,9 @@ export function Features() {
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Timeline Builder
               </h3>
-              <p className="text-base text-gray-500 leading-relaxed mb-4">
+              <p className="text-base text-gray-500 leading-relaxed">
                 Drag and drop timeline synced with the couple. Edit on the fly. Everyone sees the same schedule, so nobody is asking &ldquo;what time is first dance?&rdquo;
               </p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Real time sync with couples</span>
-              </div>
             </div>
             <TimelineMock />
           </div>
@@ -43,8 +37,8 @@ export function Features() {
               <CouplePortalMock />
             </div>
             <div className="order-1 lg:order-2">
-              <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center mb-5">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <div className="w-10 h-10 rounded-lg bg-violet-100 flex items-center justify-center mb-5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-violet-600">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                   <circle cx="9" cy="7" r="4" />
                   <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -54,23 +48,17 @@ export function Features() {
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Couple Portal
               </h3>
-              <p className="text-base text-gray-500 leading-relaxed mb-4">
+              <p className="text-base text-gray-500 leading-relaxed">
                 Send one link. They fill in names, pronunciation guides, bridal party, cultural notes. You never chase details again.
               </p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Pronunciation guides built in</span>
-              </div>
             </div>
           </div>
 
           {/* 3. Script Organiser */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div>
-              <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center mb-5">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center mb-5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-amber-600">
                   <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" />
                   <polyline points="14 2 14 8 20 8" />
                   <line x1="16" x2="8" y1="13" y2="13" />
@@ -81,15 +69,9 @@ export function Features() {
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Script Organiser
               </h3>
-              <p className="text-base text-gray-500 leading-relaxed mb-4">
+              <p className="text-base text-gray-500 leading-relaxed">
                 Opening, transitions, closing. All in collapsible sections. Reuse templates across weddings. Stop copying from old Google Docs.
               </p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Reusable templates by section</span>
-              </div>
             </div>
             <ScriptMock />
           </div>
@@ -100,7 +82,7 @@ export function Features() {
               <NightModeMock />
             </div>
             <div className="order-1 lg:order-2">
-              <div className="w-10 h-10 rounded-lg bg-gray-900 flex items-center justify-center mb-5">
+              <div className="w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center mb-5">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FBBF24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
                 </svg>
@@ -108,16 +90,30 @@ export function Features() {
               <h3 className="text-2xl font-bold text-gray-900 mb-3">
                 Night Mode
               </h3>
-              <p className="text-base text-gray-500 leading-relaxed mb-4">
+              <p className="text-base text-gray-500 leading-relaxed">
                 Dark interface built for live performance. Large text, current item highlighted, next cue visible. No tabs, no clutter. Just you and the timeline.
               </p>
-              <div className="flex items-center gap-2 text-sm text-gray-400">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Works offline</span>
-              </div>
             </div>
+          </div>
+
+          {/* 5. Client Management */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div>
+              <div className="w-10 h-10 rounded-lg bg-emerald-100 flex items-center justify-center mb-5">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-600">
+                  <rect x="2" y="3" width="20" height="18" rx="2" />
+                  <line x1="2" x2="22" y1="9" y2="9" />
+                  <line x1="10" x2="10" y1="9" y2="21" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                Client Management
+              </h3>
+              <p className="text-base text-gray-500 leading-relaxed">
+                Everything you track in a spreadsheet or CRM, purpose built for MCs. Couple contacts, vendor details, payment status, notes. All the basics, plus the MC specifics no generic CRM handles.
+              </p>
+            </div>
+            <ClientManagementMock />
           </div>
         </div>
       </div>
@@ -138,8 +134,8 @@ function TimelineMock() {
     <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-lg shadow-gray-100/80">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-gray-900 flex items-center justify-center">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+          <div className="w-5 h-5 rounded bg-blue-100 flex items-center justify-center">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-blue-600"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
           </div>
           <span className="text-xs font-semibold text-gray-700">Timeline</span>
         </div>
@@ -154,7 +150,7 @@ function TimelineMock() {
             key={i}
             className={`flex items-center gap-3 px-3 py-2.5 rounded-md text-sm border transition-all group ${
               item.status === "current"
-                ? "bg-gray-900 border-gray-900 text-white"
+                ? "bg-blue-600 border-blue-600 text-white"
                 : item.status === "done"
                   ? "bg-gray-50/50 border-transparent opacity-40"
                   : "bg-white border-gray-100 hover:border-gray-200"
@@ -164,7 +160,7 @@ function TimelineMock() {
               item.status === "current" ? "bg-white" : item.status === "done" ? "bg-gray-300" : "bg-gray-200"
             }`} />
             <span className={`font-mono text-[11px] w-14 flex-shrink-0 ${
-              item.status === "current" ? "text-gray-400" : "text-gray-400"
+              item.status === "current" ? "text-blue-200" : "text-gray-400"
             }`}>
               {item.time}
             </span>
@@ -173,7 +169,7 @@ function TimelineMock() {
             }`}>
               {item.event}
             </span>
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className={`cursor-grab flex-shrink-0 transition-colors ${item.status === "current" ? "text-gray-600" : "text-gray-200 group-hover:text-gray-400"}`}>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className={`cursor-grab flex-shrink-0 transition-colors ${item.status === "current" ? "text-blue-300" : "text-gray-200 group-hover:text-gray-400"}`}>
               <circle cx="9" cy="5" r="1.5" /><circle cx="15" cy="5" r="1.5" />
               <circle cx="9" cy="12" r="1.5" /><circle cx="15" cy="12" r="1.5" />
               <circle cx="9" cy="19" r="1.5" /><circle cx="15" cy="19" r="1.5" />
@@ -194,8 +190,8 @@ function CouplePortalMock() {
     <div className="rounded-lg border border-gray-200 bg-white p-5 shadow-lg shadow-gray-100/80">
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-gray-900 flex items-center justify-center">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /></svg>
+          <div className="w-5 h-5 rounded bg-violet-100 flex items-center justify-center">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-violet-600"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /></svg>
           </div>
           <span className="text-xs font-semibold text-gray-700">Couple Details</span>
         </div>
@@ -205,7 +201,7 @@ function CouplePortalMock() {
         <div>
           <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Names</label>
           <div className="px-3 py-2 bg-gray-50 border border-gray-100 rounded-md text-[13px] text-gray-800 font-medium">
-            Mia Russo &amp; Luca Bianchi
+            Ananya Sharma &amp; Vikram Mehta
           </div>
         </div>
         <div>
@@ -216,16 +212,16 @@ function CouplePortalMock() {
             </span>
           </label>
           <div className="px-3 py-2 bg-blue-50 border border-blue-200 rounded-md text-[13px] text-blue-800 font-semibold">
-            MEE·ah ROO·so &amp; LOO·ka bee·AN·kee
+            ah·NUN·ya SHAR·ma &amp; VIK·rum MEH·ta
           </div>
         </div>
         <div>
           <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Bridal Party</label>
           <div className="space-y-1.5">
             {[
-              { name: "Sofia Russo", role: "Maid of Honour" },
-              { name: "Giulia Bianchi", role: "Sister" },
-              { name: "Priya Patel", role: "Bridesmaid" },
+              { name: "Priya Sharma", role: "Maid of Honour" },
+              { name: "Neha Mehta", role: "Sister" },
+              { name: "Aisha Patel", role: "Bridesmaid" },
             ].map((person, i) => (
               <div key={i} className="flex items-center justify-between px-3 py-2 bg-gray-50 border border-gray-100 rounded-md">
                 <span className="text-[13px] text-gray-700">{person.name}</span>
@@ -237,7 +233,7 @@ function CouplePortalMock() {
         <div>
           <label className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block mb-1.5">Cultural Notes</label>
           <div className="px-3 py-2 bg-amber-50 border border-amber-100 rounded-md text-[12px] text-amber-800">
-            Italian family traditions. Tarantella dance after dinner. No bouquet toss.
+            Hindu ceremony with Saptapadi. Mehendi night before. Baraat procession at 3pm.
           </div>
         </div>
       </div>
@@ -250,12 +246,12 @@ function ScriptMock() {
     <div className="rounded-lg border border-gray-200 bg-white shadow-lg shadow-gray-100/80 overflow-hidden">
       <div className="px-5 pt-5 pb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-5 h-5 rounded bg-gray-900 flex items-center justify-center">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><polyline points="14 2 14 8 20 8" /></svg>
+          <div className="w-5 h-5 rounded bg-amber-100 flex items-center justify-center">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-amber-600"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z" /><polyline points="14 2 14 8 20 8" /></svg>
           </div>
           <span className="text-xs font-semibold text-gray-700">Scripts</span>
         </div>
-        <span className="text-[10px] text-gray-400">Mia &amp; Luca</span>
+        <span className="text-[10px] text-gray-400">Ananya &amp; Vikram</span>
       </div>
 
       <div className="border-t border-gray-100">
@@ -270,10 +266,10 @@ function ScriptMock() {
           </div>
           <div className="px-5 pb-4 pl-9">
             <p className="text-[12px] text-gray-500 leading-relaxed">
-              &ldquo;Good evening, everyone. My name is [Your Name], and it is an absolute honour to be your MC tonight for the wedding of Mia and Luca.&rdquo;
+              &ldquo;Good evening, everyone. My name is [Your Name], and it is an absolute honour to be your MC tonight for the wedding of Ananya and Vikram.&rdquo;
             </p>
             <p className="text-[12px] text-gray-400 leading-relaxed mt-2">
-              &ldquo;Before we get started, I want to acknowledge the Russo and Bianchi families for bringing us all together...&rdquo;
+              &ldquo;Before we get started, I want to acknowledge the Sharma and Mehta families for bringing us all together...&rdquo;
             </p>
           </div>
         </div>
@@ -331,7 +327,7 @@ function NightModeMock() {
       <div className="px-6 py-7">
         <p className="text-[10px] text-gray-600 uppercase tracking-wider font-semibold mb-2">Now</p>
         <h4 className="text-4xl font-bold text-white mb-1.5">First Dance</h4>
-        <p className="text-sm text-gray-500">Mia &amp; Luca &middot; &ldquo;At Last&rdquo; by Etta James</p>
+        <p className="text-sm text-gray-500">Ananya &amp; Vikram &middot; &ldquo;At Last&rdquo; by Etta James</p>
 
         {/* Progress bar */}
         <div className="mt-5 h-1.5 bg-gray-800 rounded-full overflow-hidden">
@@ -355,6 +351,61 @@ function NightModeMock() {
             <span className="text-xs font-mono text-gray-400 bg-gray-800 px-2.5 py-1 rounded">8:55</span>
           </div>
         </div>
+      </div>
+    </div>
+  );
+}
+
+function ClientManagementMock() {
+  const clients = [
+    { couple: "Ananya & Vikram", date: "Mar 15", venue: "The Grounds", status: "Confirmed", payment: "Paid" },
+    { couple: "Jess & Raf", date: "Mar 22", venue: "Centennial Park", status: "Confirmed", payment: "Deposit" },
+    { couple: "Priya & Tom", date: "Apr 5", venue: "Doltone House", status: "Pending", payment: "Unpaid" },
+    { couple: "Sarah & James", date: "Apr 19", venue: "Taronga Zoo", status: "Confirmed", payment: "Paid" },
+  ];
+
+  return (
+    <div className="rounded-lg border border-gray-200 bg-white shadow-lg shadow-gray-100/80 overflow-hidden">
+      <div className="px-5 pt-5 pb-3 flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <div className="w-5 h-5 rounded bg-emerald-100 flex items-center justify-center">
+            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-emerald-600">
+              <rect x="2" y="3" width="20" height="18" rx="2" /><line x1="2" x2="22" y1="9" y2="9" /><line x1="10" x2="10" y1="9" y2="21" />
+            </svg>
+          </div>
+          <span className="text-xs font-semibold text-gray-700">Clients</span>
+        </div>
+        <span className="text-[10px] text-gray-400">4 upcoming</span>
+      </div>
+
+      {/* Table header */}
+      <div className="border-t border-gray-100">
+        <div className="grid grid-cols-12 gap-2 px-5 py-2 text-[10px] font-semibold text-gray-400 uppercase tracking-wider border-b border-gray-100">
+          <div className="col-span-4">Couple</div>
+          <div className="col-span-2">Date</div>
+          <div className="col-span-3">Venue</div>
+          <div className="col-span-3 text-right">Payment</div>
+        </div>
+
+        {/* Rows */}
+        {clients.map((client, i) => (
+          <div key={i} className={`grid grid-cols-12 gap-2 px-5 py-2.5 text-[12px] items-center ${i < clients.length - 1 ? "border-b border-gray-50" : ""} hover:bg-gray-50 transition-colors`}>
+            <div className="col-span-4 font-medium text-gray-800 truncate">{client.couple}</div>
+            <div className="col-span-2 text-gray-500 font-mono text-[11px]">{client.date}</div>
+            <div className="col-span-3 text-gray-500 truncate">{client.venue}</div>
+            <div className="col-span-3 text-right">
+              <span className={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
+                client.payment === "Paid"
+                  ? "bg-emerald-50 text-emerald-600 border border-emerald-100"
+                  : client.payment === "Deposit"
+                    ? "bg-amber-50 text-amber-600 border border-amber-100"
+                    : "bg-gray-100 text-gray-500 border border-gray-200"
+              }`}>
+                {client.payment}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

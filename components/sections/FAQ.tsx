@@ -14,7 +14,7 @@ export function FAQ() {
     {
       id: "crm",
       q: "Is this a CRM?",
-      a: "No. Zebri is not a client database. It\u2019s a command centre for running individual weddings. Couple details, timeline, scripts, night mode. That\u2019s it.",
+      a: "Zebri includes client management features\u2014couple contacts, vendor details, payment tracking\u2014but it\u2019s not a generic CRM. It\u2019s purpose-built for MCs. Think of it as the operational hub no generic CRM was designed to be.",
     },
     {
       id: "launch",
@@ -98,12 +98,10 @@ export function FAQ() {
           <p className="text-sm text-gray-500">
             Still have questions?{" "}
             <a
-              href="https://instagram.com/zebrimc"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:arjun@zebri.com.au"
               className="text-gray-900 font-medium hover:text-gray-700 transition-colors underline underline-offset-2"
             >
-              DM us on Instagram
+              arjun@zebri.com.au
             </a>
           </p>
         </div>

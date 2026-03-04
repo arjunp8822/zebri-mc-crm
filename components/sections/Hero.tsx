@@ -92,13 +92,11 @@ function DashboardMock() {
       {/* Top bar */}
       <div className="flex items-center justify-between px-4 py-2.5 border-b border-gray-100 bg-gray-50/80">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-bold text-gray-800 tracking-tight">
-            zebri
-          </span>
+          <img src="/zebri-logo.svg" alt="zebri" className="h-3.5" />
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="text-gray-400">
             <path d="m9 18 6-6-6-6" />
           </svg>
-          <span className="text-xs text-gray-500">Mia &amp; Luca</span>
+          <span className="text-xs text-gray-500">Ananya &amp; Vikram</span>
         </div>
         <div className="flex items-center gap-2">
           <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-emerald-50 border border-emerald-200">
@@ -126,11 +124,11 @@ function DashboardMock() {
               key={i}
               className={`flex items-center gap-2 px-2.5 py-1.5 rounded text-[11px] font-medium cursor-pointer transition-colors ${
                 item.active
-                  ? "bg-gray-900 text-white"
+                  ? "bg-blue-50 text-blue-700"
                   : "text-gray-500 hover:bg-gray-100"
               }`}
             >
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={item.active ? "text-white" : "text-gray-400"}>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={item.active ? "text-blue-600" : "text-gray-400"}>
                 <path d={item.iconPath} />
               </svg>
               {item.label}
@@ -143,7 +141,7 @@ function DashboardMock() {
               Upcoming
             </p>
             {[
-              { couple: "Mia & Luca", date: "Mar 15", active: true },
+              { couple: "Ananya & Vikram", date: "Mar 15", active: true },
               { couple: "Jess & Raf", date: "Mar 22", active: false },
               { couple: "Priya & Tom", date: "Apr 5", active: false },
             ].map((w, i) => (
@@ -168,13 +166,13 @@ function DashboardMock() {
           <div className="flex items-start justify-between mb-4">
             <div>
               <h3 className="text-sm font-bold text-gray-900">
-                Mia &amp; Luca&apos;s Wedding
+                Ananya &amp; Vikram&apos;s Wedding
               </h3>
               <p className="text-[11px] text-gray-400 mt-0.5">
                 March 15, 2026 &middot; The Grounds of Alexandria
               </p>
             </div>
-            <button className="px-2.5 py-1 text-[10px] font-semibold bg-gray-900 text-white rounded transition-colors hover:bg-gray-800">
+            <button className="px-2.5 py-1 text-[10px] font-semibold bg-blue-600 text-white rounded transition-colors hover:bg-blue-700">
               Go Live
             </button>
           </div>
@@ -202,7 +200,7 @@ function DashboardMock() {
                   key={i}
                   className={`flex items-center gap-2 px-2 py-1.5 rounded text-[11px] border transition-colors ${
                     item.status === "current"
-                      ? "bg-gray-900 border-gray-900 text-white"
+                      ? "bg-blue-600 border-blue-600 text-white"
                       : item.status === "done"
                         ? "bg-white border-gray-50 opacity-40"
                         : "bg-white border-gray-100"
@@ -212,7 +210,7 @@ function DashboardMock() {
                     item.status === "current" ? "bg-white" : item.status === "done" ? "bg-gray-300" : "bg-gray-200"
                   }`} />
                   <span className={`font-mono text-[10px] w-11 flex-shrink-0 ${
-                    item.status === "current" ? "text-gray-300" : "text-gray-400"
+                    item.status === "current" ? "text-blue-200" : "text-gray-400"
                   }`}>
                     {item.time}
                   </span>
@@ -221,7 +219,7 @@ function DashboardMock() {
                   }`}>
                     {item.event}
                   </span>
-                  <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" className={`flex-shrink-0 ${item.status === "current" ? "text-gray-600" : "text-gray-200"}`}>
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" className={`flex-shrink-0 ${item.status === "current" ? "text-blue-300" : "text-gray-200"}`}>
                     <circle cx="9" cy="5" r="1.5" /><circle cx="15" cy="5" r="1.5" />
                     <circle cx="9" cy="12" r="1.5" /><circle cx="15" cy="12" r="1.5" />
                     <circle cx="9" cy="19" r="1.5" /><circle cx="15" cy="19" r="1.5" />
@@ -235,12 +233,12 @@ function DashboardMock() {
           <div className="grid grid-cols-2 gap-2 mt-3">
             <div className="rounded border border-gray-100 p-2 bg-gray-50/50">
               <p className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider mb-1.5">Couple</p>
-              <p className="text-[11px] font-semibold text-gray-800">Mia Russo &amp; Luca Bianchi</p>
+              <p className="text-[11px] font-semibold text-gray-800">Ananya Sharma &amp; Vikram Mehta</p>
               <div className="flex items-center gap-1 mt-1">
                 <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" strokeWidth="2">
                   <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" />
                 </svg>
-                <span className="text-[10px] text-blue-600 font-medium">MEE·ah ROO·so</span>
+                <span className="text-[10px] text-blue-600 font-medium">ah·NUN·ya SHAR·ma</span>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-2">
