@@ -12,7 +12,7 @@ export function FinalCTA() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-400"></span>
             </span>
             <span className="text-xs font-semibold text-amber-800 tracking-wide">
-              8 of 20 spots remaining
+              7 of 20 spots remaining
             </span>
           </div>
         </div>
