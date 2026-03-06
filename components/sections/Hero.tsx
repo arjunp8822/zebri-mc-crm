@@ -16,7 +16,7 @@ export function Hero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500"></span>
               </span>
               <span className="text-xs font-semibold text-amber-800 tracking-wide">
-                Only 8 spots left &middot; Closes March 30
+                Only 7 spots left &middot; Closes March 30
               </span>
             </div>
 
@@ -61,7 +61,7 @@ export function Hero() {
               </div>
               <p className="text-sm text-gray-500">
                 <span className="font-semibold text-gray-700">
-                  12 MCs have already joined the beta
+                  13 MCs have already joined the beta
                 </span>
               </p>
             </div>
